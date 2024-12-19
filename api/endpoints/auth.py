@@ -3,7 +3,7 @@ from playwright.sync_api import APIRequestContext, APIResponse
 
 def auth_login(config:dict, requests:APIRequestContext, payload:dict={}, headers:dict={}, params:dict={})->APIResponse:
     """
-    Makes auth_login request
+    Makes "/auth/login" request
     """
     return requests.post(
         f'{config["base_url"]}/auth/login', 
